@@ -1,0 +1,7 @@
+<div>
+    <button type="button" (click)="makePost()">Hacer un post</button>
+    <button type="button" (click)="makeDelete()">Enviar un delete</button>
+    <button type="button" (click)="makeHeaders()">Enviar headers personalizados</button>
+</div>
+<div *ngIf="loading">Cargando...</div>
+<pre>{{data | json}}</pre>

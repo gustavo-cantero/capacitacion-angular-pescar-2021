@@ -1,0 +1,24 @@
+<h3>Búsqueda de libros</h3>
+<div class="form-inline">
+    <input type="text" placeholder="Buscar libros" #text class="form-control" (keydown.enter)="moveToSearch(text.value)"
+        (change)="hasChange=true" />
+    <input type="button" (click)="moveToSearch(text.value)" value="Buscar" class="btn btn-primary" />
+</div>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="container-fluid">
+                <div class="row">
+                    <app-search-result *ngFor="let book of results" class="col-md-3 col-sm-6 col-xs-12" [result]="book">
+                        <span class="title">{{book.title}}</span>
+                        <span class="author">{{book.author}}</span>
+                    </app-search-result>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

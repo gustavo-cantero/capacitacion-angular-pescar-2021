@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-body">
+        <!-- <h5 class="card-title">{{result.title}}</h5>
+        <p class="card-text">{{result.author}}</p>
+        <a class="card-link" [routerLink]="['./', result.isbn]">
+            Detalle
+        </a> -->
+        <!-- <ng-content></ng-content> -->
+        <h5 class="card-title">
+            <ng-content select=".title"></ng-content>
+        </h5>
+        <p class="card-text">
+            <ng-content select=".author"></ng-content>
+        </p>
+        <a class="card-link" [routerLink]="['/book', result.isbn]">
+            Detalle
+        </a>
+    </div>
+</div>

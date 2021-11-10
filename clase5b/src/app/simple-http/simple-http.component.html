@@ -1,0 +1,13 @@
+<h2>Request simple</h2>
+<input style="width: 80%" type="text" #url value="https://jsonplaceholder.typicode.com/photos" />
+<button type="button" (click)="makeRequest(url.value)">Realizar petición</button>
+<div *ngIf="loading">Cargando...</div>
+<pre>{{data | json}}</pre>
+<!-- <div *ngFor="let obj of dataArray">
+    <img [src]="obj.thumbnailUrl">
+</div> -->
+
+<div *ngIf="error">
+    <h3>ERROR</h3>
+    <pre>{{error | json}}</pre>
+</div>

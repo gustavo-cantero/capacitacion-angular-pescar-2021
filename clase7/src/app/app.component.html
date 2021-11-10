@@ -1,0 +1,13 @@
+<div>
+  <h1>Ejemplo de routing</h1>
+  <div class="nav nav-pills">
+    <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/home']">Home</a>&nbsp;
+    <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/about']">Acerca de...</a>&nbsp;
+    <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/contact']">Contacto</a>&nbsp;
+    <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/books']">Buscar libros</a>&nbsp;
+    <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/jokes']">Chiste malos</a>&nbsp;
+    <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/login']">Ingresar</a>&nbsp;
+  </div>
+</div>
+
+<router-outlet></router-outlet>

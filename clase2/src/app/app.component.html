@@ -1,0 +1,17 @@
+<fieldset>
+    <label>Nombre:</label>
+    <input type="text" #nombre>
+    <br>
+    <label>Dirección:</label>
+    <input type="text" #dir>
+    <br>
+    <label>Teléfono:</label>
+    <input type="tel" #tel>
+    <br>
+    <button (click)="add(nombre.value, dir.value, tel.value)">Agregar</button>
+</fieldset>
+
+<div *ngFor="let p of people">
+    <app-person [person]="p" (remove)="delete($event)"></app-person>
+    <hr>
+</div>

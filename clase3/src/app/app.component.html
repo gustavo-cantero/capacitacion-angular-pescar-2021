@@ -1,0 +1,38 @@
+<form [formGroup]="myform">
+  <fieldset formGroupName="name">
+    <div>
+      <label>Nombre</label>
+      <input type="text" formControlName="firstName">
+    </div>
+    <div>
+      <label>Apellido</label>
+      <input type="text" formControlName="lastName">
+    </div>
+  </fieldset>
+  <div>
+    <label>Email</label>
+    <input type="email" formControlName="email" [ngClass]="{
+        'has-error': myform.controls.email.invalid && myform.controls.email.touched,
+        'complete': myform.controls.email.valid && myform.controls.email.touched
+    }">
+    <div>¿Cambió? {{ myform.controls.email.dirty }}</div>
+    <div>¿Original? {{ myform.controls.email.pristine }}</div>
+    <div>¿Hizo foco? {{ myform.controls.email.touched }}</div>
+    <div>¿Válido? {{ myform.controls.email.valid }}</div>
+    <div>¿Inválido? {{ myform.controls.email.invalid }}</div>
+  </div>
+  <div>
+    <label>Password</label>
+    <input type="password" formControlName="password" [ngClass]="{
+      'has-error': myform.controls.password.invalid && myform.controls.password.touched,
+      'complete': myform.controls.password.valid && myform.controls.password.touched
+    }">
+    <div style="color: red" *ngIf="myform.controls.password.invalid && myform.controls.password.touched">
+      Verifique la contraseña
+    </div>
+  </div>
+</form>
+<hr>
+<pre>{{ myform.value | json }}</pre>
+<hr>
+<button (click)="send()">Enviar</button>

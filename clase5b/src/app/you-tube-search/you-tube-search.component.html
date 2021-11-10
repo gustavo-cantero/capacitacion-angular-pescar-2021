@@ -1,0 +1,8 @@
+<div>
+    <h3>Búsqueda en YouTube</h3>
+    <app-search-box (results)="updateResults($event)"></app-search-box>
+    <div style="display: flex; flex-wrap: wrap">
+        <app-search-result style="max-width: 400px; margin: 10px;" *ngFor="let result of results" [result]="result">
+        </app-search-result>
+    </div>
+</div>

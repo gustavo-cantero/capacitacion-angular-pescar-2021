@@ -1,0 +1,52 @@
+<h1>{{title}}</h1>
+<button (click)="prueba()">Hola</button>
+
+<hr>
+
+<div *ngIf="!pulso">No pulsó</div>
+<div *ngIf="pulso">Ya pulsaste!</div>
+<hr>
+<div [style.background-color]="colorBg" [style.font-size.px]="fontSize">
+  Rojo
+</div>
+<hr>
+
+<ul>
+  <li *ngFor="let city of cities;let num = index">
+    {{num+1}}: {{city}}
+  </li>
+</ul>
+
+<hr>
+
+<ul [ngSwitch]="fontSize">
+  <li *ngSwitchCase="20">Veinte</li>
+  <li *ngSwitchCase="21">Veintiuno</li>
+  <li *ngSwitchCase="22">Veintidos</li>
+  <li *ngSwitchCase="23">Veintitres</li>
+  <li *ngSwitchCase="21">Veintiuno (de nuevo)</li>
+  <li *ngSwitchDefault>Muy grande</li>
+</ul>
+
+<hr>
+
+<span>Fuente: {{ fontSize }}</span>
+<br>
+<span ngNonBindable>Fuente: {{ fontSize }}</span>
+<hr>
+
+<div [ngClass]="{'pulsado': pulso, 'no-pulsado': !pulso}">
+  ¿Pulsó?: {{ pulso ? "Si" : "No" }}
+</div>
+
+<hr>
+
+<div *ngFor="let item of peopleByCity">
+    <h2>{{ item.city }}</h2>
+    <table>
+        <tr *ngFor="let p of item.people">
+            <td>{{ p.name }}</td>
+            <td>{{ p.age }}</td>
+          </tr>
+  </table>
+</div>

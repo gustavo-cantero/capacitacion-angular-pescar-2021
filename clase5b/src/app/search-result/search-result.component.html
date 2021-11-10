@@ -1,0 +1,8 @@
+<mat-card>
+    <mat-card-title [innerHtml]="result?.title"></mat-card-title>
+    <img mat-card-image [src]="result?.thumbnailUrl">
+    <mat-card-content>{{result?.description}}</mat-card-content>
+    <mat-card-actions>
+        <a [href]="result?.videoUrl" target="_blank">Ver en YouTube</a>
+    </mat-card-actions>
+</mat-card>
