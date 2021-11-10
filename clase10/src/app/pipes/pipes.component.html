@@ -1,0 +1,99 @@
+<!-- CurrencyPipe -->
+<div class="card card-block">
+    <h4 class="card-title">Currency</h4>
+    <div class="card-text">
+        <p ngNonBindable>{{ 1234.56 | currency:'GBP' }}</p>
+        <p>{{ 1234.56 | currency:'GBP' }}</p>
+        <p ngNonBindable>{{ 1234.56 | currency:'GBP':false }}</p>
+        <p>{{ 1234.56 | currency:'GBP':false }}</p>
+    </div>
+</div>
+<!-- DatePipe -->
+<div class="card card-block">
+    <h4 class="card-title">Date</h4>
+    <div class="card-text">
+        <p ngNonBindable>{{ dateVal | date:'shortTime' }}</p>
+        <p>{{ dateVal | date:'shortTime' }}</p>
+        <p ngNonBindable>{{ dateVal | date:'fullDate' }}</p>
+        <p>{{ dateVal | date:'fullDate' }}</p>
+        <p ngNonBindable>{{ dateVal | date:'d/M/y' }}</p>
+        <p>{{ dateVal | date:'d/M/y' }}</p>
+    </div>
+</div>
+<!-- DecimalPipe -->
+<div class="card card-block">
+    <h4 class="card-title">Decimal</h4>
+    <div class="card-text">
+        <p ngNonBindable>{{ 3.14159265 | number:'3.1-2' }}</p>
+        <p>{{ 3.14159265 | number:'3.1-2' }}</p>
+        <p ngNonBindable>{{ 3.14159265 | number:'1.4-4' }}</p>
+        <p>{{ 3.14159265 | number:'1.4-4' }}</p>
+    </div>
+</div>
+<!-- JsonPipe -->
+<div class="card card-block">
+    <h4 class="card-title">Json</h4>
+    <div class="card-text">
+        <p ngNonBindable>{{ jsonVal }}</p>
+        <p>{{ jsonVal }}</p>
+        <p ngNonBindable>{{ jsonVal | json }}</p>
+        <p>{{ jsonVal | json }}</p>
+    </div>
+</div>
+<!-- LowerCasePipe -->
+<div class="card card-block">
+    <h4 class="card-title">LowerCase</h4>
+    <div class="card-text">
+        <p ngNonBindable>{{ 'Scientia' | lowercase }}</p>
+        <p>{{ 'Scientia' | lowercase }}</p>
+    </div>
+</div>
+<!-- UpperCasePipe -->
+<div class="card card-block">
+    <h4 class="card-title">UpperCase</h4>
+    <div class="card-text">
+        <p ngNonBindable>{{ 'Scientia' | uppercase }}</p>
+        <p>{{ 'Scientia' | uppercase }}</p>
+    </div>
+</div>
+<!-- TitleCasePipe -->
+<div class="card card-block">
+    <h4 class="card-title">TitleCase</h4>
+    <div class="card-text">
+        <p ngNonBindable>{{ 'scientia soluciones Informáticas' | titlecase }}</p>
+        <p>{{ 'scientia soluciones Informáticas' | titlecase }}</p>
+    </div>
+</div>
+<!-- PercentPipe -->
+<div class="card card-block">
+    <h4 class="card-title">Percent</h4>
+    <div class="card-text">
+        <p ngNonBindable>{{ 0.123456 | percent }}</p>
+        <p>{{ 0.123456 | percent }}</p>
+        <p ngNonBindable>{{ 0.123456 | percent: '2.1-2' }}</p>
+        <p>{{ 0.123456 | percent: '2.1-2' }}</p>
+        <p ngNonBindable>{{ 42 | percent: '10.4-4' }}</p>
+        <p>{{ 42 | percent: '10.4-4' }}</p>
+    </div>
+</div>
+<!-- SlicePipe -->
+<div class="card card-block">
+    <h4 class="card-title">Slice</h4>
+    <div class="card-text">
+        <p ngNonBindable>{{ arrVal | slice:1:3 }}</p>
+        <p>{{ arrVal | slice:1:3 }}</p>
+    </div>
+</div>
+<!-- CustomPipe-->
+<div class="card card-block">
+    <h4 class="card-title">Custom</h4>
+    <div class="card-text">
+        <p>'' | default:'http://www.scientia.com.ar/images/logo.png'</p>
+        <p><img [src]="'' | default:'http://www.scientia.com.ar/images/logo.png'"></p>
+        <p>'http://angular.io/assets/images/logos/angular/logo-nav@2x.png' |
+            default:'http://www.scientia.com.ar/images/logo.png'</p>
+        <p><img
+                [src]="'http://angular.io/assets/images/logos/angular/logo-nav@2x.png' | default:'http://www.scientia.com.ar/images/logo.png'">
+        </p>
+    </div>
+</div>
